@@ -23,32 +23,20 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ __('Главная') }}
-                </a>
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ __('Книги') }}
-                </a>
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ __('Фильмы') }}
-                </a>
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ __('Администрирование') }}
-                </a>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    @auth
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Вход') }}</a>
-                            </li>
-                        @else
+                        <ul class="navbar-nav mr-auto">
+                            <li><a class="navbar-brand" href="{{ url('/') }}">{{ __('Главная') }}</a></li>
+                            <li><a class="navbar-brand" href="{{ url('/') }}">{{ __('Книги') }}</a></li>
+                            <li><a class="navbar-brand" href="{{ url('/') }}">{{ __('Музыка') }}</a></li>
+                            <li><a class="navbar-brand" href="{{ url('/') }}">{{ __('Фильмы') }}</a></li>
+                        </ul>
+                        <!-- Right Side Of Navbar -->
+                        <ul class="navbar-nav ml-auto">
+                            @if(Auth::user()->is_admin)
+                                <li><a class="navbar-brand" href="{{ url('/') }}">{{ __('Администрирование') }}</a></li>
+                            @endif
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
@@ -66,8 +54,8 @@
                                     </form>
                                 </div>
                             </li>
-                        @endguest
-                    </ul>
+                        </ul>
+                    @endauth
                 </div>
             </div>
         </nav>

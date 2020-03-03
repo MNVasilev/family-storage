@@ -1,7 +1,7 @@
 {
   "Регистрация": "Register",
   "Имя": "Name",
-  "E-Mail адрес": "E-Mail Address",
+  "Адрес E-Mail": "E-Mail Address",
   "Пароль": "Password",
   "Подтверждение пароля": "Confirm Password",
   "Вход": "Login",
@@ -11,5 +11,8 @@
   "Фильмы": "Films",
   "Администрирование": "Administration",
   "Переключение навигации": "Toggle navigation",
-  "Главная": "Main"
+  "Главная": "Main",
+  "Запомнить меня": "Remember Me",
+  "Забыли пароль?": "Forgot Your Password?",
+  "Музыка": "Music"
 }
