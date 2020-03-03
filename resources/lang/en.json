@@ -6,5 +6,10 @@
   "Подтверждение пароля": "Confirm Password",
   "Вход": "Login",
   "Выход": "Logout",
-  "Семейное хранилище": "Family store"
+  "Семейное хранилище": "Family store",
+  "Книги": "Books",
+  "Фильмы": "Films",
+  "Администрирование": "Administration",
+  "Переключение навигации": "Toggle navigation",
+  "Главная": "Main"
 }
