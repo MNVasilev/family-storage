@@ -13,8 +13,8 @@ class CreatePublishingHousesTable extends Migration
      */
     public function up()
     {
-        Schema::create('publishing_houses', function (Blueprint $table) {
-            $table->increments('publishing_houses_id');
+        Schema::create('book_publishing_houses', function (Blueprint $table) {
+            $table->increments('book_publishing_houses_id');
             $table->string('publishing_houses_slug')->unique();
             $table->string('publishing_houses_name')->unique();
             $table->integer('user_id')->unsigned();

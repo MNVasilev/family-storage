@@ -13,9 +13,9 @@ class CreateAuthorsTable extends Migration
      */
     public function up()
     {
-        Schema::create('authors', function (Blueprint $table) {
-            $table->increments('author_id');
-            $table->string('author_slug')->unique();
+        Schema::create('book_authors', function (Blueprint $table) {
+            $table->increments('book_author_id');
+            $table->string('book_author_slug')->unique();
             $table->string('surname');
             $table->string('name');
             $table->string('patronymic');

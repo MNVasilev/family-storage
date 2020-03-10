@@ -13,9 +13,9 @@ class CreateGenresTable extends Migration
      */
     public function up()
     {
-        Schema::create('genres', function (Blueprint $table) {
-            $table->increments('genre_id');
-            $table->string('genre_slug')->unique();
+        Schema::create('book_genres', function (Blueprint $table) {
+            $table->increments('book_genre_id');
+            $table->string('book_genre_slug')->unique();
             $table->string('genre_name')->unique();
             $table->integer('user_id')->unsigned();
             $table->timestamps();
