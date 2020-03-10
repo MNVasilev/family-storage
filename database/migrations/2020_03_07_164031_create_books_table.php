@@ -20,14 +20,10 @@ class CreateBooksTable extends Migration
             $table->string('book_title');
             $table->text('book_description');
             $table->string('isbn')->nullable();
-
-
-
             $table->integer('user_id')->unsigned();
-
-
-
             $table->timestamps();
+
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
