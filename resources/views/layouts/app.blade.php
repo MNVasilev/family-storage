@@ -35,7 +35,7 @@
                         <!-- Right Side Of Navbar -->
                         <ul class="navbar-nav ml-auto">
                             @if(Auth::user()->is_admin)
-                                <li><a class="navbar-brand" href="{{ url('/') }}">{{ __('Администрирование') }}</a></li>
+                                <li><a class="navbar-brand" href="{{ url('/admin_panel') }}">{{ __('Администрирование') }}</a></li>
                             @endif
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
