@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 
-class BookAuthor extends Model
+class BookGenre extends Model
 {
     use Notifiable;
 
@@ -15,13 +15,8 @@ class BookAuthor extends Model
      * @var array
      */
     protected $fillable = [
-        'book_author_slug',
-        'first_name',
-        'name',
-        'patronymic',
+        'book_genre_slug',
+        'genre_name',
         'user_id'
     ];
-
-
-
 }
