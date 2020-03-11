@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 
-class BookSeries extends Model
+class BookPublishingHouse extends Model
 {
     use Notifiable;
 
@@ -15,8 +15,8 @@ class BookSeries extends Model
      * @var array
      */
     protected $fillable = [
-        'book_series_slug',
-        'book_series_name',
+        'publishing_houses_slug',
+        'publishing_houses_name',
         'user_id'
     ];
 }

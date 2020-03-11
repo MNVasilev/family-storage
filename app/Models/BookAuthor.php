@@ -21,7 +21,4 @@ class BookAuthor extends Model
         'patronymic',
         'user_id'
     ];
-
-
-
 }
