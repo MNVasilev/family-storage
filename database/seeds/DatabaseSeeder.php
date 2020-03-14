@@ -13,8 +13,12 @@ class DatabaseSeeder extends Seeder
     {
         factory(\App\Models\User::class, 5)->create();
         factory(\App\Models\BookAuthor::class, 10)->create();
+        factory(\App\Models\Book::class, 10)->create();
         $this->call(BookGenreSeeder::class);
         $this->call(BookSeriesSeeder::class);
         $this->call(PublishingfHouseSeeder::class);
+        factory(\App\Models\BookAuthorsLink::class, 10)->create();
+        factory(\App\Models\BookGenresLink::class, 10)->create();
+        factory(\App\Models\BookSeriesLink::class, 10)->create();
     }
 }

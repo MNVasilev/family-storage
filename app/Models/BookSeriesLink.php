@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 
-class Book extends Model
+class BookSeriesLink extends Model
 {
     use Notifiable;
 
@@ -15,15 +15,8 @@ class Book extends Model
      * @var array
      */
     protected $fillable = [
-        'book_slug',
-        'book_title',
-        'book_description',
-        'isbn',
+        'book_id',
+        'book_series_id',
         'user_id'
     ];
-
-    public function genres()
-    {
-        return $this->belongsToMany('App\Models\BookGenre', 'book_genres');
-    }
 }
