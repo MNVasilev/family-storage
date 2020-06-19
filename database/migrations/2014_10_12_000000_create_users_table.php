@@ -23,6 +23,10 @@ class CreateUsersTable extends Migration
             $table->timestamps();
             $table->boolean('is_admin');
         });
+
+        Schema::table('users', function ($table) {
+            $table->softDeletes();
+        });
     }
 
     /**

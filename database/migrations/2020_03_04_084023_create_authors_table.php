@@ -24,6 +24,10 @@ class CreateAuthorsTable extends Migration
 
             $table->foreign('user_id')->references('id')->on('users');
         });
+
+        Schema::table('book_authors', function ($table) {
+            $table->softDeletes();
+        });
     }
 
     /**

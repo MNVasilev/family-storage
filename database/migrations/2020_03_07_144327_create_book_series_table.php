@@ -22,6 +22,10 @@ class CreateBookSeriesTable extends Migration
 
             $table->foreign('user_id')->references('id')->on('users');
         });
+
+        Schema::table('book_series', function ($table) {
+            $table->softDeletes();
+        });
     }
 
     /**

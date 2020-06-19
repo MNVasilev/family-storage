@@ -22,6 +22,10 @@ class CreatePublishingHousesTable extends Migration
 
             $table->foreign('user_id')->references('id')->on('users');
         });
+
+        Schema::table('book_publishing_houses', function ($table) {
+            $table->softDeletes();
+        });
     }
 
     /**
